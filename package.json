@@ -1,0 +1,22 @@
+{
+  "name": "xml-beautifier",
+  "version": "0.1.0",
+  "title": "XML Beautifier",
+  "description": "Beautifies XML documents by putting each tag and text node on their own line and correctly indents everything",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanp/xml-beautifier.git"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "author": "Jonathan Persson <persson.jonathan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.2.2"
+  }
+}
