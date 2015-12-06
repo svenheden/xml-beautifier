@@ -6,7 +6,7 @@
 This module "beautifies" XML documents by putting each tag and text node on their own line and
 correctly indents everything.
 
-Can be used e.g. if you're [pre-rendering static HTML with React][react] and (for some reason) need the
+Can be used e.g. if you're using [React as a static page generator][react] and (for some reason) need the
 generated HTML to be more human-readable.
 
 
