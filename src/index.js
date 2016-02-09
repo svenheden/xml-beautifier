@@ -1,5 +1,7 @@
 'use strict';
 
+const repeat = require('repeat-string');
+
 const splitOnTags = str => str.split(/(<\/?[^>]+>)/g).filter(line => line.trim() !== '');
 const isTag = str => /<[^>!]+>/.test(str);
 const isClosingTag = str => /<\/+[^>]+>/.test(str);
@@ -15,7 +17,7 @@ module.exports = (xml, indent) => {
       depth--;
     }
 
-    const line = indent.repeat(depth) + item;
+    const line = repeat(indent, depth) + item;
 
     if (isOpeningTag(item)) {
       depth++;

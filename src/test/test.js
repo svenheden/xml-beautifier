@@ -1,5 +1,5 @@
-var test = require('tape');
-var beautify = require('./index');
+const test = require('tape');
+const beautify = require('../index');
 
 test('indentation', assert => {
   const actual = beautify('<div><span></span></div>');
