@@ -1,6 +1,6 @@
 {
   "name": "xml-beautifier",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "title": "XML Beautifier",
   "description": "Beautifies XML documents by putting each tag and text node on their own line and correctly indents everything",
   "main": "dist/index.js",
