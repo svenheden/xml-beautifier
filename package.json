@@ -1,6 +1,6 @@
 {
   "name": "xml-beautifier",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "title": "XML Beautifier",
   "description": "Beautifies XML documents by putting each tag and text node on their own line and correctly indents everything",
   "main": "dist/index.js",
@@ -17,8 +17,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "tape": "4.10.1"
+    "babel-preset-env": "1.7.0",
+    "tape": "4.10.2"
   },
   "dependencies": {
     "repeat-string": "1.6.1"
