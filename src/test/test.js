@@ -59,3 +59,16 @@ test('tags containing "/"', assert => {
   assert.equal(actual, expected, 'should indent tags containing "/" correctly');
   assert.end();
 });
+
+test('xml declaration', assert => {
+  const actual = beautify('<?xml version="1.0"?><div><span></span></div>');
+  const expected =
+`<?xml version="1.0"?>
+<div>
+    <span>
+    </span>
+</div>`;
+
+  assert.equal(actual, expected, 'should indent xml declaration correctly');
+  assert.end();
+})
