@@ -1,6 +1,6 @@
 {
   "name": "xml-beautifier",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "title": "XML Beautifier",
   "description": "Beautifies XML documents by putting each tag and text node on their own line and correctly indents everything",
   "main": "dist/index.js",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanp/xml-beautifier.git"
+    "url": "https://github.com/svenheden/xml-beautifier.git"
   },
-  "author": "Jonathan Persson <persson.jonathan@gmail.com>",
+  "author": "Jonathan Svenheden <jonathan@svenheden.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "6.26.0",

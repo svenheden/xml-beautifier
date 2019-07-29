@@ -29,10 +29,10 @@ console.log(xml); // => will output correctly indented elements
 
 ## License
 
-MIT © [Jonathan Persson](https://github.com/jonathanp)
+MIT © [Jonathan Svenheden](https://github.com/svenheden)
 
 [npm-url]: https://npmjs.org/package/xml-beautifier
 [npm-image]: https://badge.fury.io/js/xml-beautifier.svg
-[travis-image]: https://travis-ci.org/jonathanp/xml-beautifier.svg
-[travis-url]: https://travis-ci.org/jonathanp/xml-beautifier
+[travis-image]: https://travis-ci.org/svenheden/xml-beautifier.svg
+[travis-url]: https://travis-ci.org/svenheden/xml-beautifier
 [react]: https://facebook.github.io/react/docs/top-level-api.html#reactdomserver.rendertostaticmarkup
