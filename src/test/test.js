@@ -47,6 +47,21 @@ test('text nodes', assert => {
   assert.end();
 });
 
+test('text nodes don\'t duplicate whitespace on more than one execution', assert => {
+  const actual = beautify(beautify(`<div><span>
+foo bar
+</span></div>`));
+  const expected =
+`<div>
+    <span>
+        foo bar
+    </span>
+</div>`;
+
+  assert.equal(actual, expected, 'should indent text nodes correctly with no duplicated whitespaces');
+  assert.end();
+});
+
 test('tags containing "/"', assert => {
   const actual = beautify('<div><a href="/">foo bar</a></div>');
   const expected =
