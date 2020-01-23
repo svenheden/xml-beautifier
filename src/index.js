@@ -14,6 +14,8 @@ module.exports = (xml, indent) => {
   indent = indent || '    ';
 
   return splitOnTags(xml).map(item => {
+    // removes any pre-existing whitespace chars at the end or beginning of the item
+    item = item.replace(/^\s+|\s+$/g, '');
     if (isClosingTag(item)) {
       depth--;
     }
