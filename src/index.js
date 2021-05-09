@@ -14,7 +14,6 @@ module.exports = (xml, indent) => {
   indent = indent || '    ';
   let ignoreMode = false;
   let deferred = [];
-  let cdataBlock = "";
 
   return splitOnTags(xml).map(item => {
     if (item.trim().startsWith("<![CDATA[")) {
@@ -23,7 +22,7 @@ module.exports = (xml, indent) => {
     if (item.trim().endsWith("]]>")) {
       ignoreMode = false;
       deferred.push(item);
-      cdataBlock = deferred.join("");
+      let cdataBlock = deferred.join("");
       deferred = []
       return cdataBlock;
     }
