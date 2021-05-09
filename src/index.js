@@ -12,8 +12,26 @@ const isOpeningTag = str => isTag(str) && !isClosingTag(str) && !isSelfClosingTa
 module.exports = (xml, indent) => {
   let depth = 0;
   indent = indent || '    ';
+  let ignoreMode = false;
+  let deferred = [];
+  let cdataBlock = "";
 
   return splitOnTags(xml).map(item => {
+    if (item.trim().startsWith("<![CDATA[")) {
+      ignoreMode = true;
+    }
+    if (item.trim().endsWith("]]>")) {
+      ignoreMode = false;
+      deferred.push(item);
+      cdataBlock = deferred.join("");
+      deferred = []
+      return cdataBlock;
+    }
+    if (ignoreMode) {
+      deferred.push(item);
+      return null;
+    }
+
     // removes any pre-existing whitespace chars at the end or beginning of the item
     item = item.replace(/^\s+|\s+$/g, '');
     if (isClosingTag(item)) {
@@ -27,5 +45,5 @@ module.exports = (xml, indent) => {
     }
 
     return line;
-  }).join('\n');
+  }).filter(c => c).join('\n');
 };

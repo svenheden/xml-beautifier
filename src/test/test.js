@@ -87,3 +87,26 @@ test('xml declaration', assert => {
   assert.equal(actual, expected, 'should indent xml declaration correctly');
   assert.end();
 })
+
+test('cdata block', assert => {
+  const actual = beautify('<![CDATA[ Some stuff here <b> ]]><tag></tag>');
+  const expected =
+`<![CDATA[ Some stuff here <b> ]]>
+<tag>
+</tag>`;
+
+  assert.equal(actual, expected, 'should indent cdata block correctly');
+  assert.end();
+})
+
+test('two cdata blocks', assert => {
+  const actual = beautify('<![CDATA[ <b> ]]><tag></tag><![CDATA[ </b> ]]>');
+  const expected =
+`<![CDATA[ <b> ]]>
+<tag>
+</tag>
+<![CDATA[ </b> ]]>`;
+
+  assert.equal(actual, expected, 'should indent two cdata blocks correctly');
+  assert.end();
+})
